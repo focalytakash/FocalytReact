@@ -294,15 +294,15 @@ div#features_cta figure {
 
 @media (min-width: 992px) {
   .home-2_hero-section {
-    padding-top: 150px;
-    padding-bottom: 100px;
+    padding-top: 90px;
+    padding-bottom: 40px;
   }
 }
 
 .home-2_hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   row-gap: 30px;
   text-align: center;
 }
