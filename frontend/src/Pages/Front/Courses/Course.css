@@ -1,0 +1,147 @@
+
+.bg-img {
+    position: relative;
+    border-radius: 11px;
+    border: 1px solid #ffffff;
+    box-shadow: rgb(227, 59, 22, 77%) 0px 0px 0.25em, rgba(24, 86, 201, 0.05) 0px 0.25em 1em;
+}
+img.group1 {
+    width: 75px !important;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.course_card_footer img {
+    width: 20px;
+}
+.courses_features p {
+    line-height: normal;
+    font-size: 16px;
+}
+.color-yellow {
+    color: #FFD542;
+}
+.btn.cta-callnow {
+    background: #fff;
+    color: #FC2B5A;
+    font-family: inter;
+    border-radius: 50px;
+    font-weight: 500;
+    padding: 4px 10px;
+    width: 81%;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+.btn.cta-callnow:hover {
+    transition: .5s;
+    background: #FC2B5A;
+    color: #fff;
+}
+.course_card_footer {
+    background: #FC2B5A;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.jobs h1 {
+    color: #FC2B5A;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'INTER', sans-serif;
+}
+.courseCard{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .btn.cta-callnow {
+        background: #fff;
+        color: #FC2B5A;
+        font-family: inter;
+        border-radius: 50px;
+        font-weight: 500;
+        padding: 4px 10px;
+        width: 100%;
+        font-size: 14px;
+        letter-spacing: 1px;
+        transition: .3s;
+    }
+}
+@media (max-width: 392px) {
+    .btn.cta-callnow {
+        background: #fff;
+        color: #FC2B5A;
+        font-family: inter;
+        border-radius: 50px;
+        font-weight: 500;
+        padding: 4px 10px;
+        width: 100%;
+        font-size: 14px;
+        letter-spacing: 1px;
+        transition: .3s;
+    }
+    .courses_features p{
+        font-size: 14px;
+    }
+}
+@media (max-width: 327px) {
+    .btn.cta-callnow {
+        background: #fff;
+        color: #FC2B5A;
+        font-family: inter;
+        border-radius: 50px;
+        font-weight: 500;
+        padding: 4px 9px;
+        width: 100%;
+        font-size: 13px !important;
+        letter-spacing: 1px;
+        transition: .3s;
+    }
+    
+}
+@media only screen and (max-width: 767px) {
+    .jobs-heading {
+        font-size: 22px;
+    }
+}
+@media (max-width: 768px) {
+    .jobs-heading {
+        font-size: 30px !important;
+    }
+}
+@media (max-width: 578px) {
+    .jobs-heading {
+        font-size: 27px !important;
+    }
+}
+@media (max-width: 432px) {
+    .jobs-heading {
+        font-size: 25px !important;
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .card {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .card {
+        width: 95% !important;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .card {
+        width: 95% !important;
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .card-padd {
+        display: flex
+;
+        justify-content: center;
+        padding-left: 0 !important;
+    }
+}

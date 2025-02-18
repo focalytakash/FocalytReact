@@ -1,6 +1,6 @@
 import React from 'react'
-import FrontHeader from './FrontHeader';
-import FrontFooter from './FrontFooter';
+import FrontHeader from './FrontHeader/FrontHeader';
+import FrontFooter from './FrontFooter/FrontFooter';
 
 const FrontLayout = ({ children }) => {
   return (
