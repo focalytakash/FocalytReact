@@ -143,7 +143,7 @@ const FrontHeader = () => {
                     <li class="nav-item nav-item-has-children">
                       {/* <!-- <a href="https://about.focalyt.com/" target="_blank" class="nav-link-item drop-trigger">About Us
                   </a> --> */}
-                      <a href="/about_us" class="nav-link-item drop-trigger">About Us
+                      <a href="/about" class="nav-link-item drop-trigger">About Us
                       </a>
                     </li>
                     <li class="nav-item">

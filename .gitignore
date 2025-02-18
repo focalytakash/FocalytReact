@@ -53,6 +53,4 @@ Thumbs.db
 /focalyt-new-key.json
 /views/app/candidate/learn.ejs
 /views/front/blog.ejs
-/frontend/package.json
-/frontend/package-lock.json
 /frontend/node_modules
