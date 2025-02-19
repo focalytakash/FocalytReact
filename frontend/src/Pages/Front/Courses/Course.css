@@ -57,6 +57,23 @@ img.group1 {
 }
 
 @media only screen and (max-width: 1199px) {
+    .card {
+        width: 100%;
+    }
+    .card-padd {
+        display: flex
+;
+        justify-content: center;
+        padding-left: 0 !important;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .jobs-heading {
+        font-size: 30px !important;
+    }
+    .card {
+        width: 95% !important;
+    }
     .btn.cta-callnow {
         background: #fff;
         color: #FC2B5A;
@@ -68,6 +85,24 @@ img.group1 {
         font-size: 14px;
         letter-spacing: 1px;
         transition: .3s;
+    }
+    .jobs-heading {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .card {
+        width: 95% !important;
+    }
+}
+@media (max-width: 578px) {
+    .jobs-heading {
+        font-size: 27px !important;
+    }
+}
+@media (max-width: 432px) {
+    .jobs-heading {
+        font-size: 25px !important;
     }
 }
 @media (max-width: 392px) {
@@ -101,47 +136,4 @@ img.group1 {
         transition: .3s;
     }
     
-}
-@media only screen and (max-width: 767px) {
-    .jobs-heading {
-        font-size: 22px;
-    }
-}
-@media (max-width: 768px) {
-    .jobs-heading {
-        font-size: 30px !important;
-    }
-}
-@media (max-width: 578px) {
-    .jobs-heading {
-        font-size: 27px !important;
-    }
-}
-@media (max-width: 432px) {
-    .jobs-heading {
-        font-size: 25px !important;
-    }
-}
-@media only screen and (max-width: 1199px) {
-    .card {
-        width: 100%;
-    }
-}
-@media only screen and (max-width: 767px) {
-    .card {
-        width: 95% !important;
-    }
-}
-@media only screen and (max-width: 700px) {
-    .card {
-        width: 95% !important;
-    }
-}
-@media only screen and (max-width: 1199px) {
-    .card-padd {
-        display: flex
-;
-        justify-content: center;
-        padding-left: 0 !important;
-    }
 }

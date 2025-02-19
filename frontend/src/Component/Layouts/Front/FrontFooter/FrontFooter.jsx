@@ -15,7 +15,7 @@ function Footer() {
           <li>
             <a href="/">
               <figure>
-                <img src="/public_assets/images/icons/home.png" draggable="false"
+                <img src="/Assets/public_assets/images/icons/home.png" draggable="false"
                   className="img-fluid footer-skill-course m-0"/>
               </figure>
               <span className="text-white pt-1">Home</span>
@@ -26,7 +26,7 @@ function Footer() {
           <li>
             <a href="/courses">
               <figure>
-                <img src="/public_assets/images/icons/learn.png" draggable="false"
+                <img src="/Assets/public_assets/images/icons/learn.png" draggable="false"
                   className="footer-skill-course img-fluid m-0"/>
               </figure>
               <span className="text-white pt-1">Courses</span>
@@ -41,7 +41,7 @@ function Footer() {
           <li>
             <a href="/joblisting">
               <figure>
-                <img src="/public_assets/images/icons/jobs.png" draggable="false"
+                <img src="/Assets/public_assets/images/icons/jobs.png" draggable="false"
                   className="footer-skill-course img-fluid m-0"/></figure>
               <span className="text-white pt-1">Jobs</span>
             </a>
@@ -49,7 +49,7 @@ function Footer() {
           <li>
             <a href="https://api.whatsapp.com/send?text=Check%20out%20Focalyt's%20courses%20and%20job%20opportunities%20at%20https://focalyt.com.%20Enhance%20your%20skills%20and%20secure%20a%20great%20job%20now">
               <figure>
-                <img src="/public_assets/images/icons/share.png" draggable="false"
+                <img src="/Assets/public_assets/images/icons/share.png" draggable="false"
                   className="footer-skill-course img-fluid m-0"/></figure>
               <span className="text-white pt-1">Share</span>
             </a>

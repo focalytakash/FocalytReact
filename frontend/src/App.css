@@ -6,7 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+body{
+  background-color: #121212;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -36,6 +38,8 @@
     transform: rotate(360deg);
   }
 }
-body{
-  background-color: #121212;
+.img-fluid{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }

@@ -601,17 +601,6 @@ opacity: 0;
 }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-#careerModal .hero-section {
-padding: 60px 0;
-}
-
-#careerModal .career-form {
-padding: 1rem;
-}
-}
-
 /* Print Styles */
 @media print {
 #careerModal .modal-dialog {
@@ -624,7 +613,11 @@ margin: 0;
 display: none;
 }
 }
+
 @media (max-width: 768px) {
+  .images {
+    gap: 10px;
+  }
     .ar_labs figure{
       display: flex;
       align-items: center;
@@ -767,6 +760,13 @@ display: none;
     .blog--images .slick-dots {
       bottom: -25px;
     }
+    #careerModal .hero-section {
+      padding: 60px 0;
+      }
+      
+      #careerModal .career-form {
+      padding: 1rem;
+      }
   
   }
   

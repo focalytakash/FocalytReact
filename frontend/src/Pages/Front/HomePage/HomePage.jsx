@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TechnologySlider from '../../../Component/Layouts/Front/TechnologySlider/TechnologySlider';
 
-// src/pages/HomePage.js
+
 const HomePage = () => {
 
   useEffect(() => {
@@ -79,7 +79,7 @@ const HomePage = () => {
         <div className="home-2_hero-section section-padding-120 mt-5" id="hero">
           <div className="container">
             <div className="row row--custom">
-              <div className="col-xxl-6 col-lg-6 col-md-12 col-xs-8 col-10" data-aos-duration="1000" data-aos="fade-left"
+              <div className="col-xxl-6 col-lg-6 col-md-12 col-xs-8 col-12" data-aos-duration="1000" data-aos="fade-left"
                 data-aos-delay="300">
                 {/* <!-- <div className="home-2_hero-image-block">
                 <div className="home-2_hero-image">
@@ -175,11 +175,11 @@ const HomePage = () => {
         </div>
 
       </section>
-      <section className="d-xxl-none d-xl-none d-lg-none d-md-nonoe d-md-none d-sm-block d-block">
+      <section className="d-xxl-none d-xl-none d-lg-none d-md-none d-sm-block d-block" id="hero_sm">
         <div className="home-2_hero-section section-padding-120 mt-5" id="hero">
           <div className="container">
             <div className="row row--custom">
-              <div className="col-xxl-6 col-lg-6 col-md-12 col-xs-8 col-10" data-aos-duration="1000" data-aos="fade-left"
+              <div className="col-xxl-6 col-lg-6 col-md-12 col-xs-8 col-12" data-aos-duration="1000" data-aos="fade-left"
                 data-aos-delay="300">
                 {/* <!-- <div className="home-2_hero-image-block">
                 <div className="home-2_hero-image">
@@ -220,7 +220,7 @@ const HomePage = () => {
                 </div>
                 <div className="col-xxl-12 mx-auto mt-xxl-5 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-3 mt-3">
                   <div className="row justify-content-start" id="features_cta">
-                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-sm-3 mb-3 cta_cols">
+                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 text-center mb-sm-3 mb-3 cta_cols">
                       <a href="/joblisting" target="_blank">
                         <figure className="figure">
                           <img className="Sirv image-main" src="/Assets/public_assets/images/newpage/index/job_search.png"
@@ -230,7 +230,7 @@ const HomePage = () => {
                         <h4 className="head">Future Technology Jobs</h4>
                       </a>
                     </div>
-                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-sm-3 mb-3 cta_cols">
+                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 text-center mb-sm-3 mb-3 cta_cols">
                       <a href="/courses">
                         <figure className="figure">
                           <img className="Sirv image-main" src="/Assets/public_assets/images/newpage/index/skill_course.png"
@@ -240,7 +240,7 @@ const HomePage = () => {
                         <h4 className="head">Future Technology Courses</h4>
                       </a>
                     </div>
-                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-sm-3 mb-3 cta_cols">
+                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 text-center mb-sm-3 mb-3 cta_cols">
                       <a href="/labs">
                         <figure className="figure">
                           <img className="Sirv image-main" src="/Assets/public_assets/images/newpage/index/Future Technology Labs.png"
@@ -275,6 +275,8 @@ const HomePage = () => {
         </div>
 
       </section>
+  
+
       <section id="how">
 
         <div className="home-2_content-section-1 section-padding-120" id="about">

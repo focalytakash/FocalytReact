@@ -83,6 +83,10 @@ ul {
   list-style: none;
   padding-left: initial;
 }
+li, figure {
+  padding: 0!important;
+  margin: 0!important;
+}
 /* 
 img {
   display: block;
