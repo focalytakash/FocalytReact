@@ -114,14 +114,14 @@ function About() {
                         <div className="row">
                             <div className="col-4">
                                 <div className="focalytLogo">
-                                    {/* <img src="../..//images/logo/logo.png" alt="focal logo" /> */}
-                                    <img src="public/images/logo/logo.png" alt="focal logo" />
+                                    {/* <img src="/Assets/public/images/logo/logo.png" alt="focal logo" /> */}
+                                    <img src="/Assets/public/images/logo/logo.png" alt="focal logo" />
                                 </div>
                             </div>
                             <div className="col-4"></div>
                             <div className="col-4">
                                 <div className="focalytLogo">
-                                    <img src="public/images/logo/focal.png" alt="focal logo" />
+                                    <img src="/Assets/public/images/logo/focal.png" alt="focal logo" />
                                 </div>
                             </div>
                         </div>
@@ -307,8 +307,52 @@ function About() {
             <h2 className="focalyt_Team text-white">Focalyt Team</h2>
           </div>
         </div>
+        <div class="col-md-12">
+          <div class="row justify-content-evenly ">
+         
+
+            <div class="col-md-6 pb-4">
+              <div class="elementor-widget-containers">
+                <div class="elementor-image-box-wrapper">
+                  <figure class="elementor-image-box-img">
+                    <img src="" alt="" />
+                  </figure>
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title text-white text-center">
+                      <br />
+                      <span class="founder">  </span>
+                    </h3>
+                    <p class="elementor-image-box-description text-white">
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 pb-4">
+              <div class="elementor-widget-containers">
+                <div class="elementor-image-box-wrapper">
+                  <figure class="elementor-image-box-img">
+                    <img src="" alt="" />
+                  </figure>
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title text-white text-center">
+                      <br />
+                      <span class="founder">  </span>
+                    </h3>
+                    <p class="elementor-image-box-description text-white">
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+          </div>
+        </div>
         <div className="col-md-12">
-          <div className="row justify-content-evenly">
+          <div className="row justify-content-evenly g-4">
             <div className="col-md-4 pb-4">
               <div className="elementor-widget-containers">
                 <div className="elementor-image-box-wrapper">
@@ -358,28 +402,24 @@ function About() {
                 </div>
               </div>
             </div>
+            <div className="col-md-4">
+              <div className="elementor-widget-containers">
+                <div className="elementor-image-box-wrapper">
+                  <figure className="elementor-image-box-img">
+                    <img src="" alt="" />
+                  </figure>
+                  <div className="elementor-image-box-content">
+                    <h3 className="elementor-image-box-title text-white text-center">
+                      <br />
+                      <span className="founder"></span>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div> 
         </div>
       </div>
-
-      <div className="row g-3 align-items-center">
-        <div className="col-md-4">
-          <div className="elementor-widget-containers">
-            <div className="elementor-image-box-wrapper">
-              <figure className="elementor-image-box-img">
-                <img src="" alt="" />
-              </figure>
-              <div className="elementor-image-box-content">
-                <h3 className="elementor-image-box-title text-white text-center">
-                  <br />
-                  <span className="founder"></span>
-                </h3>
-                <p className="elementor-image-box-description text-white"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> 
     </div>
   </div>
 </section>

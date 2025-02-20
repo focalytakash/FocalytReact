@@ -9,6 +9,8 @@ import Jobs from './Pages/Front/Jobs/Jobs';
 import Contact from './Pages/Front/Contact/Contact';
 import CourseDetails from './Pages/Front/CourseDetails/CourseDetails';
 import "./App.css";
+import CompanyLogin from './Component/Layouts/App/Company/CompanyLogin';
+import Sidebar from './Pages/App/Sidebar/Sidebar';
 const App = () => {
   return (
     <Router>
@@ -21,9 +23,13 @@ const App = () => {
         <Route exact={true} path={"/joblisting"} element={<Jobs/>}/>
         <Route exact={true} path={"/contact"} element={<Contact/>}/>
         <Route exact={true} path={"/coursedetails"} element={<CourseDetails/>}/>
+        <Route exact={true} path={"/company/login"} element={<CompanyLogin/>}/>
         {/* Add more routes as needed */}
       </Routes>
       <FrontFooter/>
+      <Routes>
+      <Route exact={true} path={"/candidate/searchcourses"} element={<Sidebar/>}/>
+      </Routes>
     </Router>
   );
 };

@@ -14,7 +14,7 @@ const AdminLayout = ({ children }) => {
   );
 };
 
-function Index() {
+function index() {
   return (
     <AdminLayout>
       <div>
@@ -24,4 +24,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default index;

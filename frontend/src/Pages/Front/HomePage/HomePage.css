@@ -684,6 +684,9 @@ section#hero_sm .home-2_hero-content-text h1 {
   .last_cta h3 {
     font-size: 22px;
   }
+  .home-2_hero-content{
+    flex-direction: column;
+  }
 }
 @media  (max-width: 992px) {
   

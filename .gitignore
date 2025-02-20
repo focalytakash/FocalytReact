@@ -54,3 +54,4 @@ Thumbs.db
 /views/app/candidate/learn.ejs
 /views/front/blog.ejs
 /frontend/node_modules
+/frontend/src/Component/Layouts/MainLayout.jsx

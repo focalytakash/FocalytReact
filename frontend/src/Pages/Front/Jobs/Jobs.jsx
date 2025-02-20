@@ -199,7 +199,7 @@ function Jobs() {
                           <img src="/Assets/public_assets/images/newjoblisting/job_course.jpg" class="digi" alt=""/>
                           <img src="/Assets/public_assets/images/newjoblisting/playy.svg" alt="" class="group1"/>
                   </div>
-                  <div class="card-body px-0 pb-0">
+                  <div class="card-body alter-card-body px-0 pb-0">
                     <h4 class="card-title text-center text-truncate mx-auto"></h4>
                     <h5 class="mx-auto"></h5>
                     <p class="text-center digi-price mb-3 mt-3">

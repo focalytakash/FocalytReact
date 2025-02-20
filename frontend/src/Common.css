@@ -75,9 +75,12 @@ a {
   display: inline-block;
 }
 
-a {
+a  {
+  color: #FC2B5A;
   text-decoration: none;
+  background-color: transparent;
 }
+
 
 ul {
   list-style: none;
