@@ -110,8 +110,8 @@ function About() {
             <section className="section-padding-30 mt-5"></section>
             <section className="bg-white">
                 <div className="focalBanner">
-                    <div className="container-fluid">
-                        <div className="row">
+                    <div className="container">
+                        <div className="row align-items-center">
                             <div className="col-4">
                                 <div className="focalytLogo">
                                     {/* <img src="/Assets/public/images/logo/logo.png" alt="focal logo" /> */}
@@ -136,12 +136,12 @@ function About() {
                             <div className="col-12">
                                 <h2 className="skillTech text-black">
                                     <span className="gradient">Focalyt</span>
-                                    <span> A Skill-Tech brand of Focal Skill</span>
-                                    <span className="gradient">Development Pvt. Ltd.</span>
+                                    <span>&nbsp; A Skill-Tech brand of Focal Skill</span>
+                                    <span className="gradient">&nbsp; Development Pvt. Ltd.</span>
                                 </h2>
                             </div>
                             <div className="col-12">
-                                <p className="globalLearning text-black">
+                                <p className="globalLearning text-black py-3">
                                     At Focalyt, we are committed to revolutionizing the way people learn
                                     and grow in today's rapidly evolving world. As an innovative skill
                                     tech platform, Focalyt is dedicated to empowering individuals and

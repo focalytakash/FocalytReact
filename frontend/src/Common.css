@@ -5046,12 +5046,7 @@ div#loading img {
   }
 }
 
-.site-header {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: #121212;
-  /* background-color: transparent; */
-}
+
 .site-header--absolute {
   position: absolute;
   top: 0;

@@ -16,8 +16,14 @@
 .focalBanner{
     padding-top: 30px;
 }
-.focalytLogo img{
-    width: 100%;
+/* .focalytLogo img{
+    width: 60%;
+} */
+.focalytLogo:nth-child(1) img{
+  width: 75%;
+}
+.focalytLogo:nth-child(3) img{
+  width: 60%;
 }
 /* .skill-Tech-Brand, .workingArea, .Partners{
 padding-top:30px;

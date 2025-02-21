@@ -362,66 +362,128 @@ router.post("/jobsearch", (req, res) => {
 	});
 });
 router.get("/courses", async (req, res) => {
-	let filter = { status: true}
+	let filter = { status: true }
+	
 	const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-  console.log(fullUrl);
+	
+	// Modify script to run after DOM is loaded and escape quotes properly
+	const storageScript = `
+	  <script>
+		document.addEventListener('DOMContentLoaded', function() {
+		  try {
+			const storedurl = localStorage.getItem('entryUrl');
+			if(!storedurl){
+			  // Store current URL immediately
+			  const data = {
+				url: '${fullUrl.replace(/'/g, "\\'")}',
+				timestamp: new Date().getTime()
+			  };
+			  localStorage.setItem('entryUrl', JSON.stringify(data));
+			  
+			  // Verify it was stored
+			  console.log('URL stored:', localStorage.getItem('entryUrl'))
+			};
+			
+			// Function to check and clean expired URL
+			function cleanExpiredUrl() {
+			  const stored = localStorage.getItem('entryUrl');
+			  if (stored) {
+				const data = JSON.parse(stored);
+				const now = new Date().getTime();
+				const hours24 = 24 * 60 * 60 * 1000;
+				
+				if (now - data.timestamp > hours24) {
+				  localStorage.removeItem('entryUrl');
+				  console.log('Expired URL removed');
+				}
+			  }
+			}
+			
+			// Check for expired URLs
+			cleanExpiredUrl();
+			
+		  } catch (error) {
+			console.error('Error storing URL:', error);
+		  }
+		});
+	  </script>
+	`;
+	
+	const countJobs = await Courses.find(filter).countDocuments()
+	const contact = await Contact.find({ status: true, isDeleted: false }).sort({ createdAt: 1 })
+	const perPage = 18;
+	const p = parseInt(req.query.page);
+	const page = p || 1;
+	const totalPages = Math.ceil(countJobs / perPage);
+	
+	let courses = await Courses.aggregate([
+	  { $match: filter },
+	  { $unwind: "$sectors" },
+	  {
+		$lookup: {
+		  from: "coursesectors",
+		  localField: "sectors",
+		  foreignField: "_id",
+		  as: "sectorDetails"
+		}
+	  },
+	  {
+		$unwind: "$sectorDetails"
+	  },
+	  {
+		$group: {
+		  _id: "$_id",
+		  doc: { $first: "$$ROOT" },  // Keep the entire original document
+		  sectors: { $push: "$sectors" },
+		  sectorNames: { $push: "$sectorDetails.name" }
+		}
+	  },
+	  {
+		$addFields: {
+		  "doc.sectors": "$sectors",
+		  "doc.sectorNames": "$sectorNames"
+		}
+	  },
+	  {
+		$replaceRoot: { newRoot: "$doc" }
+	  },
+	  { $sort: { createdAt: -1 } },
+	  { $skip: perPage * (page - 1) },
+	  { $limit: perPage }
+	]);
   
-  // Modify script to run after DOM is loaded and escape quotes properly
-  const storageScript = `
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        try {
-		const storedurl = localStorage.getItem('entryUrl');
-		if(!storedurl){
-          // Store current URL immediately
-          const data = {
-            url: '${fullUrl.replace(/'/g, "\\'")}',
-            timestamp: new Date().getTime()
-          };
-          localStorage.setItem('entryUrl', JSON.stringify(data));
-          
-          // Verify it was stored
-          console.log('URL stored:', localStorage.getItem('entryUrl'))};
-          
-          // Function to check and clean expired URL
-          function cleanExpiredUrl() {
-            const stored = localStorage.getItem('entryUrl');
-            if (stored) {
-              const data = JSON.parse(stored);
-              const now = new Date().getTime();
-              const hours24 = 24 * 60 * 60 * 1000;
-              
-              if (now - data.timestamp > hours24) {
-                localStorage.removeItem('entryUrl');
-                console.log('Expired URL removed');
-              }
-            }
-          }
-          
-          // Check for expired URLs
-          cleanExpiredUrl();
-          
-        } catch (error) {
-          console.error('Error storing URL:', error);
-        }
-      });
-    </script>
-  `;
-     	const countJobs = await Courses.find(filter).countDocuments()
-		 const contact = await Contact.find({ status: true, isDeleted: false }).sort({ createdAt: 1 })
-		const perPage = 18;
-		const p = parseInt(req.query.page);
-		const page = p || 1;
-		const totalPages = Math.ceil(countJobs / perPage);
-		let courses = await Courses.find(filter).sort({  createdAt: -1 }).skip(perPage * page - perPage).limit(perPage)
-		rePath = res.render(`${req.vPath}/front/courses`, {
-		courses,
-		storageScript: storageScript,
-		phoneToCall: contact[0]?.mobile,
-		totalPages,
-		page
+	// Extract unique sectors from the courses
+	const uniqueSectors = await Courses.aggregate([
+	  { $match: filter },
+	  { $unwind: "$sectors" },
+	  {
+		$lookup: {
+		  from: "coursesectors",
+		  localField: "sectors",
+		  foreignField: "_id",
+		  as: "sectorDetails"
+		}
+	  },
+	  { $unwind: "$sectorDetails" },
+	  {
+		$group: {
+		  _id: "$sectorDetails._id",
+		  name: { $first: "$sectorDetails.name" }
+		}
+	  },
+	  { $sort: { name: 1 } }
+	]);
+	
+	// Use res.json() to send JSON data, not res.send.json()
+	return res.json({
+	  courses,
+	  storageScript,
+	  phoneToCall: contact[0]?.mobile,
+	  totalPages,
+	  uniqueSectors,
+	  page
 	});
-});
+  });
 router.get("/coursedetails/:id", async(req, res) => {
 	const {id}=req.params
     let course=await Courses.findOne({_id:id})
@@ -469,7 +531,7 @@ router.get("/coursedetails/:id", async(req, res) => {
 		});
 	  </script>
 	`;
-	rePath = res.render(`${req.vPath}/front/coursedetails`, {
+	return res.json({
 		course,
 		storageScript: storageScript,
 	});
@@ -1275,7 +1337,6 @@ router.route('/parser')
 		rePath = res.render(`${req.vPath}/front/parser`, {
 		});
 	})
-
 
 
 module.exports = router;

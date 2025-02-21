@@ -103,6 +103,10 @@ figure img {
     width: 20px;
     padding-top: 4px;
 }
+.jobFigImg{
+    width: 20px!important;
+    padding-top: 4px;
+}
 .alter-card-body {
     background-size: 100% !important;
     background-position: center;

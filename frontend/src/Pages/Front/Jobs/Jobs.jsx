@@ -214,7 +214,7 @@ function Jobs() {
                               <div class="row">
                                 <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 my-auto">
                                   <figure class="text-end">
-                                    <img src="/Assets/public_assets/images/newjoblisting/qualification.png" class="img-fluid p-0"
+                                    <img src="/Assets/public_assets/images/newjoblisting/qualification.png" class="img-fluid jobFigImg p-0"
                                       draggable="false"/>
                                   </figure>
                                 </div>
@@ -229,7 +229,7 @@ function Jobs() {
                               <div class="row">
                                 <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 my-auto">
                                   <figure class="text-end">
-                                    <img src="/Assets/public_assets/images/newjoblisting/fresher.png" class="img-fluid p-0"
+                                    <img src="/Assets/public_assets/images/newjoblisting/fresher.png" class="img-fluid jobFigImg p-0"
                                       draggable="false"/>
                                   </figure>
                                 </div>
@@ -244,7 +244,7 @@ function Jobs() {
                               <div class="row">
                                 <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 my-auto">
                                   <figure class="text-end">
-                                    <img src="/Assets/public_assets/images/newjoblisting/location.png" class="img-fluid p-0"
+                                    <img src="/Assets/public_assets/images/newjoblisting/location.png" class="img-fluid jobFigImg p-0"
                                       draggable="false"/>
                                   </figure>
                                 </div>
@@ -261,7 +261,7 @@ function Jobs() {
                               <div class="row">
                                 <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
                                   <figure class="text-end">
-                                    <img src="/Assets/public_assets/images/newjoblisting/onsite.png" class="img-fluid p-0"
+                                    <img src="/Assets/public_assets/images/newjoblisting/onsite.png" class="img-fluid jobFigImg p-0"
                                       draggable="false"/>
                                   </figure>
                                 </div>
@@ -274,11 +274,11 @@ function Jobs() {
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-3 text-center">
                               <a class="btn cta-callnow btn-bg-color"
-                                href="/candidate/login?returnUrl=/candidate/job/<%=recentJob._id%>">Apply Now</a>
+                                href="/candidate/login?returnUrl=/candidate/job">Apply Now</a>
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-3 text-center">
                               <a class="btn cta-callnow"
-                                href="/candidate/login?returnUrl=/candidate/job/<%=recentJob._id%>">Call Now</a>
+                                href="/candidate/login?returnUrl=/candidate/job">Call Now</a>
                             </div>
                           </div>
                         </div>
@@ -288,7 +288,7 @@ function Jobs() {
                       <div class="row py-2">
                         <div
                           class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 justify-content-center align-items-center text-center">
-                          <a href="/jobdetailsmore/<%=recentJob._id%>"><span class="learnn pt-1 text-white">Learn
+                          <a href="/jobdetailsmore"><span class="learnn pt-1 text-white">Learn
                               More</span> <img src="/Assets/public_assets/images/link.png" class="align-text-top"/></a>
                         </div>
                       </div>
